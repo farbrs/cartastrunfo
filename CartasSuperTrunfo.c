@@ -18,25 +18,37 @@ int main() {
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
-    char nome[20];
-    float populacao, pib;
-    char codigo[10]; 
+    char nome[20], codigo[10], estado[10];
+    float area, pibPercapita, pib;
+    int populacao, pontosTuristicos; 
 
-    printf("Insira o nome da cidade: ");
-    scanf(" %[^\n]s", nome);
-    printf("Insira o numero de habitantes: ");
-    scanf("%f", &populacao);
-    printf("Qual o PIB da cidade? ");
-    scanf("%f", &pib);
-    printf("Insira o código da cidade: ");
-    scanf("%s", codigo);
+    printf("Insira o nome da cidade:\n"); // nome da cidade
+    scanf("%s", &nome);    // recebe o nome
+    printf("Insira o numero de habitantes:\n");
+    scanf("%d", &populacao); // recebe a quantidade de habitantes
+    printf("Qual o PIB da cidade?\n");
+    scanf("%f", &pib); //  recebe o pib 
+    printf("Qual a area da cidade?\n");
+    scanf("%f", &area);
+    printf("Insira o estado: \n");
+    scanf("%s", &estado);
+    printf("Quantos pontos Turisticos tem? \n");
+    scanf("%d.", &pontosTuristicos);
+    printf("Insira o código da cidade:\n");
+    scanf("%s", &codigo); // /recebe o codigo da cidade
+
+    // Cálculo do PIB per capita
+    pibPercapita = pib / populacao;
 
     printf("\n=== DADOS DA CIDADE ===\n");
-    printf("Cidade: %s.\n", nome);
-    printf("População: %.2f.\n", populacao);
+    printf("Cidade: %s. \n", nome);
+    printf("População: %d. ", populacao);
     printf("Pib: %.2f.\n", pib);
-    printf("Código: %s\n", codigo);
-
+    printf("PibPercapta: %.2f. \n", pibPercapita);
+    printf("Área: %.2f.\n", area);
+    printf("Estado: %s.\n", estado);
+    printf("Código: %s.\n", codigo);
+    printf("Pontos Turisticos: %d", pontosTuristicos);
 
     return 0;
 }
