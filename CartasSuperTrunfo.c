@@ -23,7 +23,7 @@ int main() {
     int populacao, pontosTuristicos; 
 
     printf("Insira o nome da cidade:\n"); // nome da cidade
-    scanf("%s", &nome);    // recebe o nome
+    scanf("%s", nome); // recebe o nome
     printf("Insira o numero de habitantes:\n");
     scanf("%d", &populacao); // recebe a quantidade de habitantes
     printf("Qual o PIB da cidade?\n");
@@ -31,11 +31,11 @@ int main() {
     printf("Qual a area da cidade?\n");
     scanf("%f", &area);
     printf("Insira o estado: \n");
-    scanf("%s", &estado);
+    scanf("%s", estado);
     printf("Quantos pontos Turisticos tem? \n");
     scanf("%d.", &pontosTuristicos);
     printf("Insira o código da cidade:\n");
-    scanf("%s", &codigo); // /recebe o codigo da cidade
+    scanf("%s", codigo); // /recebe o codigo da cidade
 
     // Cálculo do PIB per capita
     pibPercapita = pib / populacao;
